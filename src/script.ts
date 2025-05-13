@@ -1,4 +1,4 @@
-let mem: string = ""
+let mem: string = "";
 
 function render() {
   document.getElementById("display")!.innerHTML = `<a>${mem}</a>`;
@@ -10,7 +10,7 @@ export function addOperation(n: string) {
 }
 
 export function clearDisplay() {
-  mem = '';
+  mem = "";
   render();
 }
 
@@ -23,9 +23,9 @@ export function calculate() {
   try {
     let result2: string = (eval(mem)).toString();
     document.getElementById("display")!.innerHTML = `<a>${result2}</a>`;
-    mem = ''; }
-  catch (e) {
-    document.getElementById("display")!.innerHTML = `<a>Error</a>`;
+    mem = ""; }
+  catch {
+    document.getElementById("display")!.innerHTML = "<a>Error</a>";
   }
 }
 
