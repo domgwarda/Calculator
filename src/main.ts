@@ -6,24 +6,35 @@ document.querySelector<HTMLDivElement>("#calculator")!.innerHTML = `
       <a></a>
     </div>
     <div class="buttons">
-        <button class="button__number" id="button__number" onclick="appendNumber('1')">1</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('2')">2</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('3')">3</button>
-        <button class="button__operator" id="button__operator" onclick="appendOperation('+')">+</button>
+        <button class="button__number" id="button__number" onclick="addOperation('1')">1</button>
+        <button class="button__number" id="button__number" onclick="addOperation('2')">2</button>
+        <button class="button__number" id="button__number" onclick="addOperation('3')">3</button>
+        <button class="button" onclick="clearDisplay()">C</button>
+        
+        
 
-        <button class="button__number" id="button__number" onclick="appendNumber('4')">4</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('5')">5</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('6')">6</button>
-        <button class="button__operator" id="button__operator" onclick="appendOperation('-')">-</button>
+        <button class="button__number" id="button__number" onclick="addOperation('4')">4</button>
+        <button class="button__number" id="button__number" onclick="addOperation('5')">5</button>
+        <button class="button__number" id="button__number" onclick="addOperation('6')">6</button>
+        <button class="button" onclick="clearLast()">&#8592</button>
 
-        <button class="button__number" id="button__number" onclick="appendNumber('7')">7</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('8')">8</button>
-        <button class="button__number" id="button__number" onclick="appendNumber('9')">9</button>
-        <button class="button" onclick="clearDisplay()">Clear</button>
 
-        <button class="button__number" id="button__number" onclick="appendNumber('0')">0</button>
-        <button class="button__operator" id="button__operator" onclick="appendOperation('*')">*</button>
-        <button class="button__operator" id="button__operator" onclick="appendOperation('/')">/</button>
+        <button class="button__number" id="button__number" onclick="addOperation('7')">7</button>
+        <button class="button__number" id="button__number" onclick="addOperation('8')">8</button>
+        <button class="button__number" id="button__number" onclick="addOperation('9')">9</button>
+        <button class="button__operator" id="button__operator" onclick="addOperation('+')">+</button>
+
+
+        <button class="button__number" id="button__number" onclick="addOperation('0')">0</button>
+        <button class="button__bracket" id="button__bracket" onclick="addOperation('(')">(</button>
+        <button class="button__bracket" id="button__bracket" onclick="addOperation(')')">)</button>
+        <button class="button__operator" id="button__operator" onclick="addOperation('-')">-</button>
+
+        
+
+        <button class="button__operator" id="button__operator" onclick="addOperation('*')">*</button>
+        <button class="button__operator" id="button__operator" onclick="addOperation('/')">/</button>
+        <button class="button__comma" id="button__comma" onclick="addOperation('.')">,</button>
         <button class="button" onclick="calculate()">=</button>
 
     </div>

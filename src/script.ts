@@ -1,15 +1,31 @@
-let mem:string = ""
+let mem: string = ""
 
-export function appendNumber(n: string) {
-    mem += n;
-    document.getElementById("display")!.innerHTML = `<a>${mem}</a>`;
-}
-
-export function appendOperation(o: string) {
-  mem += o;
+function render() {
   document.getElementById("display")!.innerHTML = `<a>${mem}</a>`;
 }
 
+export function addOperation(n: string) {
+    mem += n;
+    render();
+}
 
-(window as any).appendNumber = appendNumber;
-(window as any).appendOperation = appendOperation;
+export function clearDisplay() {
+  mem = '';
+  render();
+}
+
+export function calculate() {
+  try {
+    let result2: string = (eval(mem)).toString();
+    document.getElementById("display")!.innerHTML = `<a>${result2}</a>`;
+    mem = ''; }
+  catch (e) {
+    document.getElementById("display")!.innerHTML = `<a>Error</a>`;
+  }
+}
+
+
+
+(window as any).addOperation = addOperation;
+(window as any).clearDisplay = clearDisplay;
+(window as any).calculate = calculate;
