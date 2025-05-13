@@ -7,6 +7,7 @@ html {
 .calculator {
   width: 20vw;
   height: 20vh;
+
 }
 
 .buttons {
@@ -29,6 +30,9 @@ html {
 
   background-color: rgb(143, 109, 175);
   border: none;
+  text-align: end;
+  font-size: 2rem;
+  color: white;
 }
 
 .button {
@@ -40,7 +44,7 @@ html {
   
 }
 
-.button_number {
+.button__number {
   aspect-ratio: 1 / 1;
   background-color: rgb(226, 189, 26);
   color: rgb(78, 146, 189);
@@ -48,7 +52,7 @@ html {
   font-size: 1rem
 }
 
-.button_operator {
+.button__operator {
   aspect-ratio: 1 / 1;
   background-color: rgb(78, 146, 189);
   color: white;
