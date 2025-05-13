@@ -14,6 +14,11 @@ export function clearDisplay() {
   render();
 }
 
+export function clearLast() {
+  mem = mem.substring(0, mem.length-1);
+  render();
+}
+
 export function calculate() {
   try {
     let result2: string = (eval(mem)).toString();
@@ -24,8 +29,7 @@ export function calculate() {
   }
 }
 
-
-
 (window as any).addOperation = addOperation;
 (window as any).clearDisplay = clearDisplay;
+(window as any).clearLast = clearLast;
 (window as any).calculate = calculate;
