@@ -1,3 +1,5 @@
+import { evaluate } from "mathjs";
+
 let mem: string = "";
 
 function render() {
@@ -24,11 +26,12 @@ export function clearLast() {
 
 export function calculate() {
   try {
-    let result2: string = (eval(mem)).toString();
+    let result2: string = (evaluate(mem)).toString();
     document.getElementById("display")!.innerHTML = `<a>${result2}</a>`;
     mem = ""; }
   catch {
     document.getElementById("display")!.innerHTML = "<a>Error</a>";
+    mem = "";
   }
 }
 
