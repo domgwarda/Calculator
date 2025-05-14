@@ -1,12 +1,15 @@
 let mem: string = "";
 
 function render() {
-  document.getElementById("display")!.innerHTML = `<a>${mem}</a>`;
+  document.getElementById("display")!.textContent = mem;
+
+
 }
 
 export function addOperation(n: string) {
     mem += n;
     render();
+    console.log(mem);
 }
 
 export function clearDisplay() {
